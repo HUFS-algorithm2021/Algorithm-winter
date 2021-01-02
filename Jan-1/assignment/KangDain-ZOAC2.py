@@ -1,3 +1,5 @@
+# 백준 18238 강다인
+
 zoac = input()  
 pointer = 0 # 현재 포인터 위치
 counter = 0 # 총 걸린 시간 저장
