@@ -1,25 +1,17 @@
-alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-         'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-# lpha = [ 0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19   20   21   22   23   24   25]
-zoac = input()  # DAIN
-pointer = 0
-counter = 0
+zoac = input()  
+pointer = 0 # 현재 포인터 위치
+counter = 0 # 총 걸린 시간 저장
 for i in zoac:
-    index = alpha.index(i) # 탐색할 값의 인덱스
-    forward = 0 # 정방향 탐색 가중치
-    reverse = 0 # 역방향 탐색 가중치
-    # 정방향 탐색
-    if index < pointer:
-        forward = 26 - (pointer - index)
-    else:
-        forward = index - pointer
-    
-    if index > pointer:
-        reverse = 26 - (index - pointer)
-    else:
-        reverse = pointer - index
+    index = ord(i) - 65 # 탐색할 값의 인덱스(ASCII 기준, ord 함수 = character to ASCII)
+    # 정방향 탐색, 가중치 forward
+    if index < pointer: forward = 26 - (pointer - index)
+    else: forward = index - pointer
 
-    counter += forward if forward <= reverse else reverse
+    #역방향 탐색, 가중치 reverse
+    if index > pointer: reverse = 26 - (index - pointer)
+    else: reverse = pointer - index
+
+    counter += forward if forward <= reverse else reverse # 두 값 중 더 작은 값을 count에 add
     pointer = index
 
 print(counter)
