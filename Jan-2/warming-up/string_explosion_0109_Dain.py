@@ -4,9 +4,8 @@ Ex = input()
 c4 = input()
 
 while True:
-    index = Ex.find(c4)
-    if index != -1:
-        Ex = Ex[0:index] + Ex[index + len(c4):]
+    if c4 in Ex:
+        Ex = Ex.replace(c4, "")
     else:
         break
 
