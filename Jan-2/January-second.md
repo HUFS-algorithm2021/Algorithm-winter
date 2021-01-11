@@ -1,7 +1,8 @@
 # 1월 2주차 warming up 문제 및 과제
 
 ### 2021년 1월 2주차 과제 
-
+- programmers 코딩테스트 연습 - 가장 큰 수
+https://programmers.co.kr/learn/courses/30/lessons/42746?language=python3
 
 ### warming-up 문제 목록
 - BOJ 1110 Add cycle
