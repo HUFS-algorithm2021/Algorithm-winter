@@ -17,6 +17,7 @@ def solution(numbers):
 
     #numbers.sort(key = lambda x : x*3, reverse=True)
     #이런 간단한...식이..있었군..
+    f_list.sort(key=lambda x:x[1], reverse= True)
     
     for i in numbers:
         f_answer.append(i[0])
