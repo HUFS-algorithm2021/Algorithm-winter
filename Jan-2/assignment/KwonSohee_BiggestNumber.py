@@ -5,7 +5,7 @@ def solution(numbers):
     f_answer = ''
     numbers = list(map(str, numbers))
 
-    for i in numbers:
+    for i in numbers: #자릿수를 맞춰주는 것이 포인트였음!
         if len(i) == 4:
             answer.append([i,i*3])
         if len(i) == 3:
@@ -17,6 +17,7 @@ def solution(numbers):
 
     #numbers.sort(key = lambda x : x*3, reverse=True)
     #이런 간단한...식이..있었군..
+    
     for i in numbers:
         f_answer.append(i[0])
 
