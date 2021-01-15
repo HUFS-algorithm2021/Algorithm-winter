@@ -1,3 +1,5 @@
+# 백준 8958 임나경
+
 num = int(input())
 list = []
 for i in range(num):
