@@ -15,6 +15,7 @@ while len(doc) - index >= len(word):
 
 print(cnt) #cnt출력
 
+# 한줄로 끝내버리기
 # print(doc.count(word)) #count() 함수가 중복되지 않게 최대 등장하는 횟수를 반환
 
 
