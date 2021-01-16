@@ -1,3 +1,5 @@
+# 백준 10828 강다인
+
 import sys
 input = sys.stdin.readline # python에서 input이 시간복잡도에 영향을 주는 케이스 2.
 
