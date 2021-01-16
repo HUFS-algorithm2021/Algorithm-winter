@@ -1,3 +1,5 @@
+# 프로그래머스 가장 큰 수 강다인
+
 def solution(numbers):
     sum_num = sum(numbers)
     # 문자열은 앞 문자가 큰 순서대로 & 길이가 긴 순서대로 sorting이 가능하다.

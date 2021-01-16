@@ -1,3 +1,5 @@
+# 백준 1543 강다인
+
 string = input() # 전체 문자열
 search = input() # 검색할 문자열
 
