@@ -15,7 +15,7 @@ while n > 0:
 
     elif n > 1: #배열의 크기를 2^(n-1) x 2^(n-1)로 4등분으로 쪼개기
         tmp = pow(2, n - 1)
-        #찾고자하는 r과 c가 포함된 사분면 찾기 , 왼족 위 박스는 그대로
+        #찾고자하는 r과 c가 포함된 사분면 찾기 , 왼쪽 위 박스는 그대로
         if tmp > r and tmp <= c: #오른쪽 위
             location += pow(tmp,2) * 1
             c -= tmp
