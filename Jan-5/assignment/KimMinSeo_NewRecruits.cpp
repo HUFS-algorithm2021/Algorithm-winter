@@ -1,44 +1,36 @@
 #include <iostream>
 using namespace std;
 /*
-어떤 사람보다 뒤쳐지면 안되므로,
-입력받은 두개의 정보중에 최고점수를 뽑고 그 둘중에 하나라도 보유한사람을
-정답(count에 더해주자)
-*/
-/*
-python(list 하면 깔꼼할거같아서)
-case_num = int(input())
-for i in range(case_num):
-    people_num = int(input())
-    for j in range(people_num):
-        people_num = map(int, input().split())
-
-*/
-int max_find(int array[],int size){
-    int max=array[0];
+다른 모든 지원자와 비교했을 때 서류심사 성적과 면접시험 성적 중 적어도 하나가 다른 지원자보다 떨어지지 않는 자만 선발한다는 원칙을 세웠다.
+ 즉, 어떤 지원자 A의 성적이 다른 어떤 지원자 B의 성적에 비해 서류 심사 결과와 면접 성적이 모두 떨어진다면 A는 결코 선발되지 않는다.
+ => paper끼리 비교 & face끼리 비교x
+ => 지원자끼리 비교*/
+int recruit_find(int paper[], int face[],int size){
+    int count=0;
     for(int i=0;i<size;i++){
-        if(max < array[i])
-            max = array[i];
-    }
-    return max;
-}
-int recruit_find(int array[],int max){
+        for(int j=0;j<size;j++){
+            if(paper[i]>paper[j] && face[i]>face[j]){
+                count++;
+                break;
+            }
+        }
 
+    }
+
+    return size-count;
 }
 int main(){
     int case_num,people_num,paper_max,face_max;
     int paper[20],face[20];
-    int count =0;
+    
     cin >> case_num;
     for(int i=0;i<case_num;i++){
         cin>> people_num;
         for(int j=0;j<people_num;j++){
-            cin >> paper[j] >> face[j];
+            cin >> paper[j] >> face[j];//굳이 2차배열혹은 다른배열로 두가지 테케를 동시에 저장할필요는 x
         }
-        //39,40중에 한줄 날리면됌
-        count+=recruit_find(paper,max_find(paper,people_num));
-        count+=recruit_find(face,max_find(face,people_num));
+        cout << recruit_find(paper,face,people_num) <<endl;
 }
-    cout << count <<endl;
+   
     return 0;    
 }
