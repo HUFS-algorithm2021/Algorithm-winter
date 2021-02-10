@@ -19,6 +19,7 @@
 - BOJ 1931 회의실배정
 - BOJ 2577 숫자의 개수
 - BOJ 13305 주유소
-- BOJ 1085 직사각형에서 탈출
+- BOJ 1085 EscapeFromTheRectangle
+- BOJ 1181 단어정렬
 
 
