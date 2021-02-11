@@ -21,5 +21,6 @@
 - BOJ 13305 주유소
 - BOJ 1085 EscapeFromTheRectangle
 - BOJ 1181 단어정렬
+- BOJ 1541 잃어버린 괄호
 
 
